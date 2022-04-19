@@ -32,18 +32,18 @@ Tags: Easy, Palindrome
 
 Solution: 
 
-var isPalindrome = function(s) {
-    let fs='';
-    for(let i=0; i<s.length; i++){
-        if((s[i] <= 'z' && s[i] >= 'a') || (s[i]>='A' && s[i]<= 'Z') || (s[i]>='0' && s[i]<= '9')){
-            fs+= String.fromCharCode(s[i].charCodeAt(0) | 32);
+    var isPalindrome = function(s) {
+        let fs='';
+        for(let i=0; i<s.length; i++){
+            if((s[i] <= 'z' && s[i] >= 'a') || (s[i]>='A' && s[i]<= 'Z') || (s[i]>='0' && s[i]<= '9')){
+                fs+= String.fromCharCode(s[i].charCodeAt(0) | 32);
+            }
         }
-    }
-    let n = fs.length;
-    for(let i=0; i<n/2; i++){
-        if(fs[i] != fs[n-1-i]) return false;
-    }
-    
-    return true;
-    
-};
+        let n = fs.length;
+        for(let i=0; i<n/2; i++){
+            if(fs[i] != fs[n-1-i]) return false;
+        }
+        
+        return true;
+        
+    };

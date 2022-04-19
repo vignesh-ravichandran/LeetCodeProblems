@@ -28,23 +28,23 @@ Tags: Easy, Moores voting algorithm
 
 Solution: 
 
-var majorityElement = function(nums) {
-    let me = null;
-    let f = 0;
-    
-    for(let i=0; i<nums.length; i++){
-        if(me==null){
-            me = nums[i];
-            f = 1;
-        }else if(me == nums[i]){
-            f++;
-        }else{
-            f--;
-            if(f==0){
-                me = null;
+    var majorityElement = function(nums) {
+        let me = null;
+        let f = 0;
+        
+        for(let i=0; i<nums.length; i++){
+            if(me==null){
+                me = nums[i];
+                f = 1;
+            }else if(me == nums[i]){
+                f++;
+            }else{
+                f--;
+                if(f==0){
+                    me = null;
+                }
             }
         }
-    }
-    
-    return me;
-};
+        
+        return me;
+    };

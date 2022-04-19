@@ -42,19 +42,19 @@ Tags: Easy, LinkedList, Loop Detection,
 Solution: 
 
 
-var hasCycle = function(head) {
-    
-    if(head == null || head.next == null || head.next.next == null) return false;
-    
-    let sp = head;
-    let fp = head;
-    fp = fp.next.next;
-    
-    while(fp.next !=null && fp.next.next!=null){
-        sp = sp.next;
+    var hasCycle = function(head) {
+        
+        if(head == null || head.next == null || head.next.next == null) return false;
+        
+        let sp = head;
+        let fp = head;
         fp = fp.next.next;
-        if(sp==fp) return true;
-    }
-    
-    return false;
-};
+        
+        while(fp.next !=null && fp.next.next!=null){
+            sp = sp.next;
+            fp = fp.next.next;
+            if(sp==fp) return true;
+        }
+        
+        return false;
+    };
